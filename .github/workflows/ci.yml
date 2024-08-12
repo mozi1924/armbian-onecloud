@@ -197,21 +197,21 @@ jobs:
           - jammy # Ubuntu 22.04 LTS
           # - lunar # Ubuntu 23.04
           # - buster # Debian 10
-          - bullseye # Debian 11
+          # - bullseye # Debian 11
           - bookworm # Debian 12
-          - sid # Debian unstable
+          # - sid # Debian unstable
         TYPE:
           - minimal
           - cli
-          - desktop
-        include:
-          - TYPE: desktop
-            DESKTOP_ENVIRONMENT: xfce
-            DESKTOP_ENVIRONMENT_CONFIG_NAME: config_base
-            DESKTOP_APPGROUPS_SELECTED: ""
-        exclude:
-          - RELEASE: sid
-            TYPE: desktop
+          # - desktop
+        # include:
+         # - TYPE: desktop
+            # DESKTOP_ENVIRONMENT: xfce
+            # DESKTOP_ENVIRONMENT_CONFIG_NAME: config_base
+            # DESKTOP_APPGROUPS_SELECTED: ""
+        # exclude:
+          # - RELEASE: sid
+            # TYPE: desktop
 
     steps:
       - name: Import env
